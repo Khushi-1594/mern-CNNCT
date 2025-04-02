@@ -1,0 +1,698 @@
+.avail-tabs {
+  display: flex;
+  gap: 5px;
+  border-bottom: 1px solid #e0e0e0;
+  padding: 2px;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  background-color: #c5c3c3;
+  width: 340px;
+  border-radius: 30px;
+}
+
+.avail-tabs button {
+  display: flex;
+  align-items: center;
+  padding: 8px 16px;
+  font-size: 13px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: black;
+  position: relative;
+  margin-right: 0px;
+  height: 34px;
+  width: 260px;
+  border-radius: 30px;
+}
+
+.avail-tabs button.active {
+  color: #333;
+  font-weight: normal;
+  background-color: white;
+  border-top: 1px solid #e0e0e0;
+  border-left: 1px solid #e0e0e0;
+  border-right: 1px solid #e0e0e0;
+  border-bottom: 1px solid white;
+  margin-bottom: -1px;
+}
+
+.avail-tabs button.active::after {
+  display: none;
+}
+
+.avail-tabs button svg {
+  margin-right: 8px;
+  width: 16px;
+  height: 16px;
+}
+  
+  .calendar-view{
+    min-height: 500px;
+    background-color: white;
+  }
+  
+  .calendar-container {
+    font-family: inherit;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  
+  .calendar-header {
+    display: flex;
+    gap: 200px;
+    padding: 15px 20px;
+    border-bottom: 1px solid #e0e0e0;
+  }
+  
+  .activity-section, .timezone-section {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .activity-section h3, .timezone-section h3 {
+    margin: 0 0 8px 0;
+    font-size: 16px;
+    font-weight: 600;
+  }
+  
+  .event-types {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .event-types span {
+    font-size: 14px;
+    color:#0066cc;
+  }
+  
+  .timezone-select {
+    width: 260px;
+  }
+
+  .timezone-select .css-13cymwt-control{
+    border: none;
+    display: flex;
+    gap: 0;
+  }
+
+  .timezone-select .css-1dimb5e-singleValue{
+    color: #1877F2;
+    max-width: 80%;
+  }
+
+  .timezone-select .css-1u9des2-indicatorSeparator {
+    display: none;
+  }
+
+  .timezone-select .css-tj5bde-Svg{
+    color:#0066cc;
+  }
+  
+  select {
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 13px;
+    background-color: white;
+  }
+  
+  .calendar-body {
+    padding: 0;
+  }
+  
+  /* Override react-big-calendar styles */
+  .rbc-toolbar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    padding: 10px;
+  }
+  
+  .rbc-toolbar .rbc-btn-group {
+    display: flex;
+  }
+  
+  .rbc-toolbar button {
+    color: #333;
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 5px 10px;
+    margin: 0 2px;
+    border-radius: 4px;
+    font-size: 14px;
+    cursor: pointer;
+  }
+  
+  .rbc-toolbar button.rbc-active {
+    background-color: #0066cc;
+    color: white;
+    border-color: #0066cc;
+  }
+  
+  .rbc-toolbar-label {
+    font-weight: bold;
+    font-size: 16px;
+  }
+  
+  .rbc-search input {
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-left: 10px;
+    width: 150px;
+  }
+  
+  .rbc-header {
+    padding: 10px;
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  .rbc-time-header-content .rbc-header {
+    border-bottom: 1px solid #e0e0e0;
+  }
+  
+  .rbc-time-view {
+    border: 1px solid #e0e0e0;
+  }
+  
+  .rbc-time-content {
+    border-top: 1px solid #e0e0e0;
+  }
+  
+  .rbc-time-gutter {
+    text-align: right;
+    padding-right: 10px;
+  }
+  
+  .rbc-day-slot .rbc-events-container {
+    margin-right: 5px;
+  }
+  
+  .rbc-event {
+    border-radius: 4px;
+    padding: 2px 5px;
+    font-size: 14px;
+    border: none;
+  }
+  
+  .rbc-time-slot {
+    min-height: 30px;
+  }
+  
+  .rbc-time-view .rbc-time-gutter .rbc-timeslot-group {
+    min-height: 40px;
+  }
+  
+  /* Availability View Styles */
+  .availability-view {
+    padding: 20px;
+    background-color: white;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    height: 100vh;
+    width: 55%;
+    color: #666;
+    border: 1px solid rgb(199, 197, 197);
+  }
+
+  .avail-view .calendar-header{
+    display: flex;
+    margin: 0px 15px;
+  }
+
+  .availability-container {
+    margin: 0 auto;
+    padding: 12px;
+    border-radius: 12px;
+    margin-left: 30px;
+    max-height: 80vh;
+    overflow-y: auto;
+  }
+  
+  .availability-container p {
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 24px;
+    color: #111827;
+  }
+  
+  .day-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 12px;
+    padding-bottom: 12px;
+  }
+
+  .day-row-start{
+    display: flex;
+    gap: 10px;
+  }
+  
+  .day-row-start input[type="checkbox"] {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #d1d5db;
+    border-radius: 4px;
+    position: relative;
+    cursor: pointer;
+  }
+  
+  .day-row-start input[type="checkbox"]:checked {
+    background-color: #3b82f6;
+    border-color: #3b82f6;
+  }
+  
+  .day-row-start input[type="checkbox"]:checked::after {
+    content: '';
+    position: absolute;
+    left: 6px;
+    top: 0px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+  }
+  
+  .day-row-start input[type="checkbox"]:disabled {
+    background-color: #f3f4f6;
+    border-color: #d1d5db;
+    cursor: not-allowed;
+  }
+  
+  .day-row-start label {
+    font-size: 14px;
+    color: #374151;
+  }
+  
+  .unavailable-text {
+    color: #6b7280;
+    font-size: 14px;
+    font-style: italic;
+    margin-left: 130px;
+    margin-top: 10px;
+  }
+  
+  .slots-container {
+    display: flex;
+    flex-direction: column;
+    margin-left: 32px;
+    gap: 8px;
+  }
+  
+  .slot-row {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-bottom: 8px;
+  }
+  
+  .slot-row input {
+    width: 80px;
+    height: 10px;
+    padding: 8px;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    font-size: 14px;
+    color: #374151;
+    background-color: #f9fafb;
+  }
+  
+  .slot-row span {
+    margin: 0 4px;
+    color: #374151;
+  }
+  
+  .slot-row button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    color: #6b7280;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    border-radius: 4px;
+  }
+  
+  .add-btn{
+    width: 30px;
+    height: 30px;
+  }
+  .add-slot-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    color: #6b7280;
+    display: flex;
+    align-items: center;
+  }
+  
+  .save-button {
+    background-color: #3b82f6;
+    color: white;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 24px;
+    margin-left: 450px;
+  }
+  
+  .save-button:hover {
+    background-color: #2563eb;
+  }
+
+  /*year view*/
+  .year-view {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  .year-view h2 {
+    color: #333;
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 28px;
+    border-bottom: 2px solid #eaeaea;
+    padding-bottom: 10px;
+  }
+  
+  .months-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+  }
+  
+  .month-card {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  
+  .month-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  .month-card h3 {
+    background-color: #f8f9fa;
+    color: #333;
+    margin: 0;
+    padding: 15px;
+    font-size: 18px;
+    border-bottom: 1px solid #eaeaea;
+  }
+  
+  .month-meetings {
+    padding: 15px;
+  }
+  
+  .month-meetings ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .month-meetings li {
+    padding: 10px;
+    margin-bottom: 8px;
+    border-radius: 4px;
+    font-size: 14px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    transition: transform 0.1s;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  
+  .month-meetings li:hover {
+    transform: translateX(3px);
+  }
+  
+  .more-meetings {
+    background-color: #f0f0f0 !important;
+    text-align: center;
+    color: #666;
+    font-style: italic;
+  }
+  
+  .no-meetings {
+    color: #999;
+    font-style: italic;
+    text-align: center;
+    padding: 20px 0;
+    margin: 0;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .months-grid {
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    }
+    
+    .year-view {
+      padding: 10px;
+    }
+    
+    .month-card h3 {
+      padding: 12px;
+      font-size: 16px;
+    }
+  }
+  
+ 
+
+  @media (max-width: 768px) {
+    .avail-tabs {
+      width: 320px;
+      border-radius: 20px;
+    }
+    
+    .avail-tabs button {
+      height: 34px;
+      width: 220px;
+      border-radius: 20px;
+    }
+
+    .availability-view {
+      padding: 10px;
+      width:85%;
+      height: auto;
+    }
+  
+    .avail-view .calendar-header{
+      display: flex;
+      gap: 50px;
+      margin-left: 10px;
+      margin-bottom: 0px;
+    }
+
+    .timezone-select {
+      width: 10px;
+    }
+  
+    .timezone-select .css-13cymwt-control{
+      width: 200px !important;
+    }
+
+    .timezone-select .css-1dimb5e-singleValue{
+      color: #1877F2;
+      margin-left: -5px;
+      max-width: 100%;
+    }
+  
+    .availability-container {
+      padding: 5px;
+      border-radius: 12px;
+      margin-left: 10px;
+      overflow-y: auto;
+    }
+    
+    .availability-container p {
+      font-size: 18px;
+      margin-bottom: 15px;
+    }
+    
+    .day-row {
+      padding-bottom: 10px;
+    }
+  
+    .day-row-start{
+      display: flex;
+      gap: 8px;
+    }
+    
+    .day-row-start label {
+      font-size: 14px;
+      color: #374151;
+    }
+    
+    .unavailable-text {
+      margin-left: 30px;
+      margin-top: 10px;
+    }
+    
+    .slots-container {
+      margin-left: 22px;
+      gap: 5px;
+    }
+    
+    .slot-row input {
+      width: 50px;
+    }
+
+    .slot-row button {
+      width: 20px;
+      height: 20px;
+    }
+    
+    .add-btn{
+      width: 20px;
+      height: 20px;
+    }
+    
+    .save-button {
+      margin-top: 20px;
+      margin-left: 200px;
+      margin-bottom: 20px;
+    }
+
+    .calendar-container{
+      width: 90%;
+    }
+    
+    .calendar-header {
+      display: flex;
+      gap: 100px;
+      padding: 15px 15px;
+      border-bottom: none;
+    }
+    
+    .activity-section, .timezone-section {
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .activity-section h3, .timezone-section h3 {
+      margin: 0 0 8px 0;
+      font-size: 16px;
+      font-weight: 600;
+    }
+    
+    .event-types {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    
+    .event-types span {
+      font-size: 14px;
+      color:#0066cc;
+    }
+    
+    .timezone-select {
+      width: 260px;
+    }
+  
+    .timezone-select .css-13cymwt-control{
+      border: none;
+      display: flex;
+      gap: 0;
+    }
+  
+    .timezone-select .css-1dimb5e-singleValue{
+      color: #1877F2;
+      max-width: 80%;
+    }
+  
+    .timezone-select .css-1u9des2-indicatorSeparator {
+      display: none;
+    }
+  
+    .timezone-select .css-tj5bde-Svg{
+      color:#0066cc;
+    }
+    
+    select {
+      padding: 5px 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 13px;
+      background-color: white;
+    }
+    
+    .calendar-body {
+      padding: 0;
+      margin-bottom: 60px;
+    }
+    
+    /* Override react-big-calendar styles */
+    .rbc-toolbar{
+      display: flex;
+      flex-direction: row;
+    }
+
+    .rbc-toolbar-label {
+      display: none;
+    }
+
+    .rbc-search{
+      display: none;
+    }
+    
+    .rbc-time-header-content .rbc-header {
+      border-bottom: 1px solid #e0e0e0;
+    }
+    
+    .rbc-time-view {
+      border: 1px solid #e0e0e0;
+      overflow-x: auto;
+    }
+    
+    .rbc-time-content {
+      border-top: 1px solid #e0e0e0;
+    }
+    
+    .rbc-time-gutter {
+      text-align: right;
+      padding-right: 10px;
+    }
+    
+    .rbc-day-slot .rbc-events-container {
+      margin-right: 10px;
+    }
+    
+    .rbc-event {
+      border-radius: 4px;
+      padding: 2px 5px;
+      font-size: 12px;
+      border: none;
+    }
+    
+    .rbc-time-slot {
+      min-height: 20px;
+    }
+    
+    .rbc-time-view .rbc-time-gutter .rbc-timeslot-group {
+      min-height: 40px;
+    }
+  }
