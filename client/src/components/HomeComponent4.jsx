@@ -7,7 +7,7 @@ import gift from "../assets/gift-icon.png";
 import cameo from "../assets/cameo-icon.png";
 import clubhouse from "../assets/clubhouse-icon.png";
 import community from "../assets/community-icon.png";
-import contact from "../assets/contactDetails-icon.png";
+import contact from "../assets/contactdetails-icon.png";
 
 const HomeComponent4 = () => {
   return (
